@@ -1,0 +1,17 @@
+Before ruan this code, here are the softwares and packages that required:
+  1. bedtools
+  2. pandas
+  
+ Here is how to run the code:
+ step 1: generating the intersect bed file
+ bedtools intersect -b motif_coord.bed -a window_coord.bed -wb -wa >intersect.bed
+ 
+ Motif_coord.bed: the motif coordinates. When you analyze other features, you can replace the motif coordinate files with other epigenomic features or transposable elements
+ Window_coord.bed: the coordinates of windows. In our analysis, the windows are 50kb resolution. You can replace it with your window coordinates.
+ intersect.bed: the output file
+ 
+ Step 2: generate features:
+ python getTF_windows.py intersect.bed window_coord.bed >dataset.motif.csv
+ 
+dataset.motif.csv is the output file
+ 
