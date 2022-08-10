@@ -14,4 +14,11 @@ Before ruan this code, here are the softwares and packages that required:
  python getTF_windows.py intersect.bed window_coord.bed >dataset.motif.csv
  
 dataset.motif.csv is the output file
+
+Step 3: Transform the motif table to transcription factor (table)
+
+python trans_motif_tf.py dataset.motif.csv
+
+The output file is dataset.tf.csv
+The motif_tf.tsv file must be in the same directory with trans_motif_tf.py
  
